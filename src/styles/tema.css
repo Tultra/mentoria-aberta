@@ -1,0 +1,138 @@
+/* ---------------------------------------------------------------------------
+   Mentoria Aberta — tema visual
+   Derivado da identidade da Ultra TI (seção 3 do PLANO.md).
+
+   Regra central: a lima ácida (#e7ef6a) é cor de DESTAQUE — marca-texto, chips,
+   botão primário, hero. Nunca cor de texto sobre fundo claro (1.23:1).
+   O acento funcional do tema claro é a versão escurecida da mesma família.
+--------------------------------------------------------------------------- */
+
+:root {
+  /* Paleta de marca */
+  --ma-ink: #111208;
+  --ma-low: #15170e;
+  --ma-panel: #1a1c11;
+  --ma-card: #242618;
+  --ma-line: #323025;
+  --ma-deep: #4a5035;
+  --ma-moss: #9ba06a;
+  --ma-sage: #a8ad58;
+  --ma-acid: #e7ef6a;
+  --ma-acid-soft: #f0f6a0;
+  --ma-paper: #fffef7;
+
+  /* Superfícies e traços dependentes de tema */
+  --ma-surface: var(--ma-panel);
+  --ma-hair: rgba(168, 173, 88, 0.22);
+  --ma-halo: rgba(231, 239, 106, 0.12);
+
+  /* Tipografia */
+  --sl-font: 'Inter Variable', Inter, system-ui, sans-serif;
+  --sl-font-mono: 'JetBrains Mono Variable', ui-monospace, SFMono-Regular, monospace;
+  --ma-font-display: 'Manrope Variable', Manrope, system-ui, sans-serif;
+
+  /* Tokens do Starlight — tema escuro (padrão) */
+  --sl-color-accent-low: #242618;
+  --sl-color-accent: #a8ad58;
+  --sl-color-accent-high: #e7ef6a;
+  --sl-color-white: #fffef7;
+  --sl-color-gray-1: #eeeee6;
+  --sl-color-gray-2: #c2c4b6;
+  --sl-color-gray-3: #9ba06a;
+  --sl-color-gray-4: #4a5035;
+  --sl-color-gray-5: #242618;
+  --sl-color-gray-6: #1a1c11;
+  --sl-color-black: #111208;
+
+  /* Cores semânticas dos callouts — tema escuro */
+  --sl-color-blue: #3c6d95;
+  --sl-color-blue-high: #8cc4ea;
+  --sl-color-purple: #1f7a6c;   /* "dica" no Starlight usa a família purple */
+  --sl-color-purple-high: #5ad0bd;
+  --sl-color-orange: #8a6320;
+  --sl-color-orange-high: #e6a84e;
+  --sl-color-red: #8f4038;
+  --sl-color-red-high: #f0968a;
+}
+
+:root[data-theme='light'] {
+  --ma-surface: #f4f4ee;
+  --ma-hair: rgba(74, 80, 53, 0.18);
+  --ma-halo: rgba(74, 80, 53, 0.07);
+
+  /* No Starlight, `white` e `black` são invertidos no tema claro por definição:
+     representam "cor de texto forte" e "cor de fundo", não valores literais. */
+  --sl-color-accent-low: #e9ecd4;
+  --sl-color-accent: #4a5035;
+  --sl-color-accent-high: #323025;
+  --sl-color-white: #111208;
+  --sl-color-gray-1: #242618;
+  --sl-color-gray-2: #4a5035;
+  --sl-color-gray-3: #59595a;
+  --sl-color-gray-4: #8a8a80;
+  --sl-color-gray-5: #d8d8d0;
+  --sl-color-gray-6: #eeeee6;
+  --sl-color-gray-7: #f4f4ee;
+  --sl-color-black: #fffef7;
+
+  /* Cores semânticas dos callouts — tema claro */
+  --sl-color-blue: #9dc2de;
+  --sl-color-blue-high: #1c5a8c;
+  --sl-color-purple: #8fcfc4;
+  --sl-color-purple-high: #12695c;
+  --sl-color-orange: #d8ab6a;
+  --sl-color-orange-high: #8a5300;
+  --sl-color-red: #d99a92;
+  --sl-color-red-high: #a5342a;
+}
+
+/* --- Tipografia editorial ------------------------------------------------ */
+
+.sl-markdown-content :is(h1, h2, h3, h4, h5, h6),
+.site-title,
+.sl-flex.hero h1,
+a.action {
+  font-family: var(--ma-font-display);
+  letter-spacing: -0.015em;
+}
+
+.sl-markdown-content :is(h2, h3) {
+  font-weight: 700;
+}
+
+/* --- Marca-texto ácido ---------------------------------------------------- */
+
+.sl-markdown-content mark {
+  background: var(--ma-acid);
+  color: var(--ma-ink);
+  padding: 0.05em 0.28em;
+  border-radius: 0.2em;
+  box-decoration-break: clone;
+}
+
+/* --- Botão primário: lima ácida com texto ink nos dois temas -------------- */
+
+a.action.primary {
+  background: var(--ma-acid);
+  color: var(--ma-ink);
+  border: 1px solid var(--ma-acid);
+  font-weight: 700;
+}
+
+a.action.primary:hover,
+a.action.primary:focus-visible {
+  background: var(--ma-acid-soft);
+  border-color: var(--ma-acid-soft);
+  color: var(--ma-ink);
+}
+
+a.action.secondary {
+  border: 1px solid var(--ma-hair);
+}
+
+/* --- Foco visível consistente -------------------------------------------- */
+
+:focus-visible {
+  outline: 2px solid var(--sl-color-accent-high);
+  outline-offset: 2px;
+}

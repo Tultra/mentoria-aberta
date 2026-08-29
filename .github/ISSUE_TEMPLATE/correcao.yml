@@ -1,0 +1,23 @@
+name: Correção de conteúdo
+description: Aponte um erro, um link quebrado ou uma informação desatualizada.
+labels: [correção]
+body:
+  - type: input
+    id: pagina
+    attributes:
+      label: Página
+      description: URL ou caminho do arquivo.
+      placeholder: /primeiros-passos/modelo-de-pagina/
+    validations:
+      required: true
+  - type: textarea
+    id: problema
+    attributes:
+      label: O que está errado
+    validations:
+      required: true
+  - type: textarea
+    id: correcao
+    attributes:
+      label: Correção sugerida
+      description: Se souber a fonte correta, inclua o link.

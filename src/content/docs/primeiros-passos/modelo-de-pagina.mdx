@@ -1,0 +1,167 @@
+---
+title: Modelo de página
+description: Página de referência com a estrutura, o tom e os componentes usados em todo o conteúdo do Mentoria Aberta.
+sidebar:
+  hidden: true
+  order: 0
+---
+
+import {
+  Aside,
+  Steps,
+  Tabs,
+  TabItem,
+  LinkCard,
+  CardGrid,
+  Badge,
+} from "@astrojs/starlight/components";
+
+Esta página existe para ser copiada. Ela mostra a estrutura esperada de um
+conteúdo do Mentoria Aberta e todos os componentes disponíveis. Duplique o
+arquivo, troque o conteúdo e apague o que não usar.
+
+<Aside type="note" title="Como usar este modelo">
+  Copie `src/content/docs/primeiros-passos/modelo-de-pagina.mdx` para a pasta da
+  seção onde o novo texto vai morar e renomeie o arquivo. O nome do arquivo vira
+  a URL, então use apenas letras minúsculas, números e hífen:
+  `como-ler-um-edital.mdx`.
+</Aside>
+
+## Estrutura esperada
+
+Toda página segue a mesma sequência, porque é ela que faz o conteúdo ser útil
+para quem chega pela busca e não pelo início:
+
+<Steps>
+
+1. **Abertura de uma frase.** Diga o problema concreto que a página resolve.
+   Nada de introdução histórica.
+
+2. **Contexto mínimo.** Só o necessário para a recomendação fazer sentido.
+
+3. **A recomendação.** O miolo da página. Direta, aplicável hoje.
+
+4. **Quando isso não vale.** O limite da recomendação. É o que separa dica boa
+   de conselho solto.
+
+5. **Como saber se está funcionando.** Um sinal observável, não uma sensação.
+
+</Steps>
+
+## Frontmatter
+
+O bloco no topo do arquivo controla título, descrição e posição na navegação.
+
+```yaml
+---
+title: Como ler um edital
+description: O que procurar em um edital antes de decidir estudar para o concurso.
+sidebar:
+  order: 2 # ordem dentro do grupo; menor aparece primeiro
+  badge: # opcional
+    text: Novo
+    variant: tip
+---
+```
+
+Só `title` é obrigatório, mas `description` deve sempre ser preenchida: ela
+aparece na busca e nos resultados de mecanismos externos.
+
+## Tom e linguagem
+
+<Aside type="tip" title="O que funciona">
+  Segunda pessoa, frases curtas, verbo no imperativo quando for instrução.
+  Exemplo: *“Leia o cronograma antes do conteúdo programático.”*
+</Aside>
+
+<Aside type="caution" title="O que evitar">
+  Superlativo (“o melhor método”), número inventado (“aumenta 300% a retenção”)
+  e qualquer promessa de prazo de aprovação. Se um dado for citado, ele precisa
+  de fonte.
+</Aside>
+
+<Aside type="danger" title="Recusado na revisão">
+  Conteúdo que promete aprovação garantida, que indica material pirateado ou que
+  apresenta opinião pessoal como se fosse regra de banca.
+</Aside>
+
+## Componentes disponíveis
+
+### Destaques
+
+Os quatro tipos acima (`note`, `tip`, `caution`, `danger`) cobrem quase tudo.
+Use no máximo dois por página — destaque demais vira ruído.
+
+```mdx
+<Aside type="tip" title="Título opcional">
+  Texto do destaque.
+</Aside>
+```
+
+### Abas
+
+Úteis quando a mesma instrução muda conforme a ferramenta ou o perfil.
+
+<Tabs>
+  <TabItem label="Concurso ainda sem edital">
+    Estude o edital anterior e acompanhe o andamento da banca. Priorize as
+    disciplinas que se repetem entre edições.
+  </TabItem>
+  <TabItem label="Edital publicado">
+    Faça o recorte pelo conteúdo programático oficial e ignore qualquer material
+    que não esteja mapeado nele.
+  </TabItem>
+</Tabs>
+
+### Passos
+
+O componente `<Steps>` acima. Use para procedimento com ordem obrigatória —
+nunca para uma lista qualquer.
+
+### Cartões de link
+
+Para apontar o próximo passo natural da leitura.
+
+<CardGrid>
+  <LinkCard
+    title="Contribuindo com o projeto"
+    description="Como propor uma alteração ou uma página nova."
+    href="https://github.com/Tultra/mentoria-aberta/blob/main/CONTRIBUTING.md"
+  />
+  <LinkCard
+    title="Voltar ao início"
+    description="Visão geral das áreas de conteúdo."
+    href="../../"
+  />
+</CardGrid>
+
+### Marca-texto e selos
+
+Use `<mark>` para o termo que a pessoa precisa levar embora: o edital é a
+
+<mark>única fonte de verdade</mark> sobre o que estudar. Selos ficam bem em
+listas: Revisão espaçada <Badge text="essencial" variant="success" /> · Resumo
+colorido <Badge text="opcional" variant="caution" />.
+
+### Tabelas
+
+| Formato | Quando usar                          | Custo de manutenção |
+| ------- | ------------------------------------ | ------------------- |
+| Lista   | Itens sem ordem obrigatória          | Baixo               |
+| Passos  | Procedimento sequencial              | Baixo               |
+| Tabela  | Comparação em duas ou mais dimensões | Alto                |
+
+<Aside type="note">
+  Tabela larga quebra no celular. Se a comparação tiver mais de três colunas,
+  prefira listas ou abas.
+</Aside>
+
+## Checklist antes de abrir o pull request
+
+- [ ] `title` e `description` preenchidos
+- [ ] A página resolve um problema declarado logo na abertura
+- [ ] Existe uma seção de limite (“quando isso não vale”)
+- [ ] Nenhuma promessa de aprovação ou prazo
+- [ ] Todo dado numérico tem fonte
+- [ ] Links funcionam e apontam para material gratuito ou oficial
+- [ ] `npm run build` passou sem erro

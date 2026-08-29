@@ -1,0 +1,36 @@
+name: Sugestão de página
+description: Proponha um tópico que ainda não existe no material.
+labels: [conteúdo]
+body:
+  - type: input
+    id: titulo
+    attributes:
+      label: Título proposto
+    validations:
+      required: true
+  - type: dropdown
+    id: secao
+    attributes:
+      label: Seção
+      options:
+        - Primeiros passos
+        - Planejamento
+        - Métodos de estudo
+        - Disciplinas
+        - Ferramentas
+        - Saúde e rotina
+    validations:
+      required: true
+  - type: textarea
+    id: problema
+    attributes:
+      label: Que problema concreto essa página resolve
+      description: Uma ou duas frases, do ponto de vista de quem estuda.
+    validations:
+      required: true
+  - type: checkboxes
+    id: autoria
+    attributes:
+      label: Autoria
+      options:
+        - label: Tenho interesse em escrever esta página.

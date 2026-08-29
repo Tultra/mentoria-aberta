@@ -1,0 +1,25 @@
+Licença do conteúdo educacional
+===============================
+
+O conteúdo educacional deste repositório — os arquivos em `src/content/`, seus
+textos, tabelas e ilustrações — é licenciado sob a
+
+    Creative Commons Atribuição 4.0 Internacional (CC BY 4.0)
+
+Você pode compartilhar e adaptar esse material, inclusive para fins comerciais,
+desde que atribua o crédito adequado, forneça um link para a licença e indique
+se foram feitas alterações.
+
+Texto completo da licença:
+https://creativecommons.org/licenses/by/4.0/legalcode.pt
+
+Resumo legível:
+https://creativecommons.org/licenses/by/4.0/deed.pt-br
+
+Atribuição sugerida:
+
+    "Mentoria Aberta" (https://github.com/Tultra/mentoria-aberta),
+    licenciado sob CC BY 4.0.
+
+O código-fonte do site (configuração, componentes e estilos) é licenciado
+separadamente sob a licença MIT. Veja o arquivo LICENSE.

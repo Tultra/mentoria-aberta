@@ -1,0 +1,133 @@
+---
+title: Mentoria Aberta
+description: Mentoria aberta para concursos públicos, organizada em documentação aberta e mantida pela comunidade.
+template: splash
+editUrl: false
+hero:
+  tagline: Mentoria aberta para concursos públicos, com documentação aberta e mantida por quem já passou pelo processo.
+  image:
+    file: ../../assets/marca.svg
+    alt: Mentoria Aberta
+  actions:
+    - text: Iniciar a Mentoria
+      link: ./primeiros-passos/prólogo/
+      icon: right-arrow
+      variant: primary
+    - text: Contribuir
+      link: https://github.com/Tultra/mentoria-aberta/blob/main/CONTRIBUTING.md
+      icon: external
+      variant: secondary
+---
+
+import { Card, CardGrid } from "@astrojs/starlight/components";
+
+<div class="ma-landing">
+
+<div class="ma-secao">
+
+## O que é o Mentoria Aberta
+
+<p class="ma-subtitulo">
+  O Mentoria Aberta é um projeto aberto, comunitário, que existe para responder
+  suas dúvidas relacionados ao estudo para concursos públicos. Tudo aqui é
+  público, escrito por quem já passou pelo processo de aprovação, e
+  disponibilizado para facilitar a sua trajetória. Que seja útil para você!
+</p>
+
+<CardGrid>
+  <Card title="Primeiros passos" icon="rocket">
+    Por onde começar.
+  </Card>
+  <Card title="Planejamento" icon="seti:notebook">
+    Planejamento, ciclo de estudos, distribuição de carga horária e revisão do
+    próprio plano.
+  </Card>
+  <Card title="Métodos de estudo" icon="open-book">
+    Revisões, resolução de questões, simulados e flashcards — com critério de
+    uso.
+  </Card>
+  <Card title="Ferramentas" icon="setting">
+    Aplicativos e planilhas gratuitas, com o problema que cada um resolve de
+    fato.
+  </Card>
+  <Card title="Saúde e rotina" icon="heart">
+    Sono, constância, procrastinação e a parte da preparação que ninguém posta.
+  </Card>
+</CardGrid>
+
+</div>
+
+<div class="ma-secao">
+
+## Como colaborar
+
+<p class="ma-subtitulo">
+  Todo o conteúdo vive em arquivos Markdown no GitHub. Uma correção pequena leva
+  menos de dois minutos e não exige instalar nada.
+</p>
+
+<ol class="ma-passos">
+  <li>
+    <strong>Encontre a página</strong>
+    <p>
+      Use a busca ou a navegação lateral até o trecho que você quer melhorar.
+    </p>
+  </li>
+  <li>
+    <strong>Clique em editar</strong>
+    <p>
+      O link “Editar esta página no GitHub” abre o arquivo já pronto para
+      alteração.
+    </p>
+  </li>
+  <li>
+    <strong>Abra um pull request</strong>
+    <p>Descreva o que mudou e por quê. O modelo de PR guia o preenchimento.</p>
+  </li>
+  <li>
+    <strong>Revisão e publicação</strong>
+    <p>Depois do aceite, o site é reconstruído e publicado automaticamente.</p>
+  </li>
+</ol>
+
+</div>
+
+<div class="ma-secao">
+
+## O projeto em números
+
+<p class="ma-subtitulo">
+  Indicadores públicos, atualizados a cada release. Enquanto o MVP não é
+  lançado, os valores abaixo são deliberadamente marcados como pendentes.
+</p>
+
+<ul class="ma-indicadores">
+  <li>
+    <span class="ma-numero">—</span>
+    <span class="ma-rotulo">Páginas publicadas</span>
+  </li>
+  <li>
+    <span class="ma-numero">—</span>
+    <span class="ma-rotulo">Pessoas contribuindo</span>
+  </li>
+  <li>
+    <span class="ma-numero">—</span>
+    <span class="ma-rotulo">Pull requests aceitos</span>
+  </li>
+  <li>
+    <span class="ma-numero">—</span>
+    <span class="ma-rotulo">Última atualização</span>
+  </li>
+</ul>
+
+</div>
+
+<div class="ma-aviso">
+
+**O que este projeto não faz.** Não vendemos aprovação, não prometemos prazo e
+não indicamos atalho que dependa de sorte. Conteúdo que promete resultado
+garantido é recusado na revisão.
+
+</div>
+
+</div>
