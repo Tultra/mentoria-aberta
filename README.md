@@ -6,7 +6,7 @@ participação da comunidade.
 ## Autoria e manutenção
 
 A Mentoria Aberta foi idealizada e é mantida por
-[Thiago Ultra](https://github.com/Tultra), com participação aberta à comunidade.
+[Thiago Ultra](https://www.profthiagoultra.com.br), com participação aberta à comunidade.
 
 O projeto oferece orientações educacionais e não garante aprovação, prazo ou
 resultado.

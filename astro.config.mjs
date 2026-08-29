@@ -65,6 +65,7 @@ export default defineConfig({
           items: [{ autogenerate: { directory: 'saude-e-rotina' } }],
         },
         // { label: 'Contribuindo', items: [{ autogenerate: { directory: 'contribuindo' } }] },
+        { label: 'Sobre', slug: 'sobre' },
       ],
     }),
   ],
