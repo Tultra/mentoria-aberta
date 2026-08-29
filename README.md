@@ -1,7 +1,15 @@
 # Mentoria Aberta
 
-Dicas de estudo para concursos públicos, organizadas em documentação aberta e
-mantidas pela comunidade.
+Dicas de estudo para concursos públicos, organizadas em documentação aberta à
+participação da comunidade.
+
+## Autoria e manutenção
+
+A Mentoria Aberta foi idealizada e é mantida por
+[Thiago Ultra](https://github.com/Tultra), com participação aberta à comunidade.
+
+O projeto oferece orientações educacionais e não garante aprovação, prazo ou
+resultado.
 
 O site é construído com [Astro](https://astro.build/) e
 [Starlight](https://starlight.astro.build/pt-br/), publicado automaticamente no
@@ -13,15 +21,15 @@ Requer Node.js 20 ou superior.
 
 ```sh
 npm install
-npm run dev      # http://localhost:4321
+npm run dev # http://localhost:4321
 ```
 
 Outros comandos:
 
-| Comando | O que faz |
-| --- | --- |
-| `npm run build` | Roda a checagem de tipos e gera o site em `dist/` |
-| `npm run preview` | Serve o build de produção localmente |
+| Comando           | O que faz                                         |
+| ----------------- | ------------------------------------------------- |
+| `npm run build`   | Roda a checagem de tipos e gera o site em `dist/` |
+| `npm run preview` | Serve o build de produção localmente              |
 
 ## Estrutura
 
@@ -49,12 +57,6 @@ ele traz a estrutura esperada, o tom e todos os componentes disponíveis.
 Ao criar a primeira página de uma seção nova, lembre de descomentar o grupo
 correspondente em `astro.config.mjs` — grupos que apontam para diretórios vazios
 quebram o build.
-
-## Publicação
-
-O site é publicado pelo workflow `.github/workflows/deploy.yml`. As variáveis
-de repositório `SITE_URL` e `SITE_BASE` permitem configurar um domínio próprio;
-sem elas, o site usa `https://Tultra.github.io/mentoria-aberta/`.
 
 ## Como contribuir
 
