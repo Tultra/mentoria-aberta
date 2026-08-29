@@ -54,16 +54,25 @@ export default defineConfig({
           label: 'Primeiros passos',
           items: [{ autogenerate: { directory: 'primeiros-passos' } }],
         },
-        // Descomente cada grupo conforme o conteúdo for sendo escrito.
-        // Um grupo que aponta para diretório vazio quebra o build.
-        // { label: 'Planejamento', items: [{ autogenerate: { directory: 'planejamento' } }] },
-        // { label: 'Métodos de estudo', items: [{ autogenerate: { directory: 'metodos-de-estudo' } }] },
-        // { label: 'Disciplinas', items: [{ autogenerate: { directory: 'disciplinas' } }] },
-        // { label: 'Ferramentas', items: [{ autogenerate: { directory: 'ferramentas' } }] },
         {
           label: 'Saúde e rotina',
           items: [{ autogenerate: { directory: 'saude-e-rotina' } }],
         },
+        {
+          label: 'Planejamento',
+          items: [{ autogenerate: { directory: 'planejamento' } }],
+        },
+        {
+          label: 'Métodos de estudo',
+          items: [{ autogenerate: { directory: 'metodos-de-estudo' } }],
+        },
+        {
+          label: 'Ferramentas',
+          items: [{ autogenerate: { directory: 'ferramentas' } }],
+        },
+        // Descomente cada grupo restante conforme o conteúdo for sendo escrito.
+        // Um grupo que aponta para diretório vazio quebra o build.
+        // { label: 'Disciplinas', items: [{ autogenerate: { directory: 'disciplinas' } }] },
         // { label: 'Contribuindo', items: [{ autogenerate: { directory: 'contribuindo' } }] },
         { label: 'Sobre', slug: 'sobre' },
       ],

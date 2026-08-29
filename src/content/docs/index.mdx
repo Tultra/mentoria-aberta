@@ -19,7 +19,7 @@ hero:
       variant: secondary
 ---
 
-import { Card, CardGrid } from "@astrojs/starlight/components";
+import { CardGrid, LinkCard } from "@astrojs/starlight/components";
 
 <div class="ma-landing">
 
@@ -35,24 +35,31 @@ import { Card, CardGrid } from "@astrojs/starlight/components";
 </p>
 
 <CardGrid>
-  <Card title="Primeiros passos" icon="rocket">
-    Por onde começar.
-  </Card>
-  <Card title="Planejamento" icon="seti:notebook">
-    Planejamento, ciclo de estudos, distribuição de carga horária e revisão do
-    próprio plano.
-  </Card>
-  <Card title="Métodos de estudo" icon="open-book">
-    Revisões, resolução de questões, simulados e flashcards — com critério de
-    uso.
-  </Card>
-  <Card title="Ferramentas" icon="setting">
-    Aplicativos e planilhas gratuitas, com o problema que cada um resolve de
-    fato.
-  </Card>
-  <Card title="Saúde e rotina" icon="heart">
-    Sono, constância, procrastinação e a parte da preparação que ninguém posta.
-  </Card>
+  <LinkCard
+    title="Primeiros passos"
+    description="Por onde começar."
+    href="./primeiros-passos/prólogo/"
+  />
+  <LinkCard
+    title="Saúde e rotina"
+    description="Sono, constância, procrastinação e a parte da preparação que ninguém posta."
+    href="./saude-e-rotina/rotina-de-estudos/"
+  />
+  <LinkCard
+    title="Planejamento"
+    description="Planejamento, ciclo de estudos, distribuição de carga horária e revisão do próprio plano."
+    href="./planejamento/"
+  />
+  <LinkCard
+    title="Métodos de estudo"
+    description="Revisões, resolução de questões, simulados e flashcards — com critério de uso."
+    href="./metodos-de-estudo/"
+  />
+  <LinkCard
+    title="Ferramentas"
+    description="Aplicativos e planilhas gratuitas, com o problema que cada um resolve de fato."
+    href="./ferramentas/"
+  />
 </CardGrid>
 
 </div>
@@ -97,25 +104,24 @@ import { Card, CardGrid } from "@astrojs/starlight/components";
 ## O projeto em números
 
 <p class="ma-subtitulo">
-  Indicadores públicos, atualizados a cada release. Enquanto o MVP não é
-  lançado, os valores abaixo são deliberadamente marcados como pendentes.
+  Indicadores públicos, atualizados a cada release.
 </p>
 
 <ul class="ma-indicadores">
   <li>
-    <span class="ma-numero">—</span>
+    <span class="ma-numero">9</span>
     <span class="ma-rotulo">Páginas publicadas</span>
   </li>
   <li>
-    <span class="ma-numero">—</span>
+    <span class="ma-numero">1</span>
     <span class="ma-rotulo">Pessoas contribuindo</span>
   </li>
   <li>
-    <span class="ma-numero">—</span>
+    <span class="ma-numero">0</span>
     <span class="ma-rotulo">Pull requests aceitos</span>
   </li>
   <li>
-    <span class="ma-numero">—</span>
+    <span class="ma-numero">29 ago. 2026</span>
     <span class="ma-rotulo">Última atualização</span>
   </li>
 </ul>
